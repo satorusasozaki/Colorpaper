@@ -13,6 +13,7 @@
 		60D50B7B1C2A272E0010470A /* CPTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D50B7A1C2A272E0010470A /* CPTableViewController.m */; };
 		60D50B7E1C2A42570010470A /* CPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D50B7D1C2A42570010470A /* CPTableViewCell.m */; };
 		60D50B811C2A449E0010470A /* ColorLists.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D50B801C2A449E0010470A /* ColorLists.m */; };
+		60D50B871C2B7B840010470A /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D50B861C2B7B840010470A /* UIColor+Hex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		60D50B7D1C2A42570010470A /* CPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPTableViewCell.m; sourceTree = "<group>"; };
 		60D50B7F1C2A449E0010470A /* ColorLists.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorLists.h; sourceTree = "<group>"; };
 		60D50B801C2A449E0010470A /* ColorLists.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorLists.m; sourceTree = "<group>"; };
+		60D50B851C2B7B840010470A /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Hex.h"; path = "../UIColor+Hex.h"; sourceTree = "<group>"; };
+		60D50B861C2B7B840010470A /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Hex.m"; path = "../UIColor+Hex.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 		60D50B3B1C2A1DB40010470A /* Colorpaper */ = {
 			isa = PBXGroup;
 			children = (
+				60D50B851C2B7B840010470A /* UIColor+Hex.h */,
+				60D50B861C2B7B840010470A /* UIColor+Hex.m */,
 				60D50B531C2A1F230010470A /* CPAppDelegate.h */,
 				60D50B541C2A1F230010470A /* CPAppDelegate.m */,
 				60D50B791C2A272E0010470A /* CPTableViewController.h */,
@@ -152,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60D50B811C2A449E0010470A /* ColorLists.m in Sources */,
+				60D50B871C2B7B840010470A /* UIColor+Hex.m in Sources */,
 				60D50B7B1C2A272E0010470A /* CPTableViewController.m in Sources */,
 				60D50B3E1C2A1DB40010470A /* main.m in Sources */,
 				60D50B7E1C2A42570010470A /* CPTableViewCell.m in Sources */,

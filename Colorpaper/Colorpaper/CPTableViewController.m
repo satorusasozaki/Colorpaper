@@ -8,8 +8,12 @@
 
 #import "CPTableViewController.h"
 #import "CPTableViewCell.h"
+#import "UIColor+Hex.h"
+#import "ColorLists.h"
 
 @interface CPTableViewController ()
+@property (strong,nonatomic) ColorLists *colorList;
+
 @end
 
 @implementation CPTableViewController
@@ -21,6 +25,11 @@
     tableView.dataSource = self;
     [self.view addSubview:tableView];
     self.tableView = tableView;
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    
+//    ColorLists *colorList = [[ColorLists alloc] init];
+    self.colorList = [[ColorLists alloc] init];
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -28,7 +37,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return [self.colorList.list count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -38,9 +47,31 @@
     if (cell == nil) {
         cell = [[CPTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    return cell;
     
+    cell.backgroundColor = [UIColor colorWithHexString:[self.colorList.list objectAtIndex:indexPath.row]];
+    
+    
+//    if (indexPath.row % 2 == 0) {
+//        cell.backgroundColor = [UIColor redColor];
+//    } else if (indexPath.row %3 == 0) {
+//        cell.backgroundColor = [UIColor greenColor];
+//    } else {
+//        cell.backgroundColor = [UIColor blueColor];
+//        
+//    }
+    return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 90;
+}
+
+
+
 //- (void)scrollViewDidScroll:(UIScrollView *)scrollView
 //{
 //    CGFloat actualPosition = scrollView.contentOffset.y;
