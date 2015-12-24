@@ -47,18 +47,8 @@
     if (cell == nil) {
         cell = [[CPTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    
     cell.backgroundColor = [UIColor colorWithHexString:[self.colorList.list objectAtIndex:indexPath.row]];
     
-    
-//    if (indexPath.row % 2 == 0) {
-//        cell.backgroundColor = [UIColor redColor];
-//    } else if (indexPath.row %3 == 0) {
-//        cell.backgroundColor = [UIColor greenColor];
-//    } else {
-//        cell.backgroundColor = [UIColor blueColor];
-//        
-//    }
     return cell;
 }
 
@@ -82,5 +72,15 @@
 //    }
 //}
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    NSArray *test = [NSArray array];
+    CGFloat actualPosition = scrollView.contentOffset.y;
+    CGFloat contentHeight = scrollView.contentSize.height - 500;
+    if (actualPosition >= contentHeight) {
+        [test addObjectsFromArray:self.colorList.list];
+        [self.tableView reloadData];
+    }
+}
 
 @end

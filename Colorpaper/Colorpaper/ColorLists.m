@@ -23,6 +23,10 @@
                                               @"B4EEB4",
                                               @"9BCD9B",
                                               @"698B69",
+                     @"98FB98",
+                     @"9AFF9A",
+                     @"90EE90",
+                     @"7CCD7C",
                                                 nil];
 
     return list;
