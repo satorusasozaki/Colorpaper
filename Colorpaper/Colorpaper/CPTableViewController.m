@@ -48,8 +48,8 @@
     if (cell == nil) {
         cell = [[CPTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    cell.backgroundColor = [UIColor colorWithHexString:[self.colorList.list objectAtIndex:indexPath.row]];
-    
+    // cell.backgroundColor = [UIColor colorWithHexString:[self.colorList.list objectAtIndex:indexPath.row]];
+    cell.backgroundColor = [self.colorList.list objectAtIndex:indexPath.row];
     return cell;
 }
 
@@ -95,7 +95,6 @@
         [self.tableView reloadData];
     }
 }
-
 
 - (void)onCompleteCapture:(UIImage *)screenImage didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
     NSString *message = @"Saved to camera roll";
