@@ -76,8 +76,7 @@
 				60D50B7A1C2A272E0010470A /* CPTableViewController.m */,
 				60D50B7C1C2A42570010470A /* CPTableViewCell.h */,
 				60D50B7D1C2A42570010470A /* CPTableViewCell.m */,
-				60D50B7F1C2A449E0010470A /* ColorLists.h */,
-				60D50B801C2A449E0010470A /* ColorLists.m */,
+				60D5A7211C2F837900F4FC0D /* Models */,
 				60D50B481C2A1DB40010470A /* Assets.xcassets */,
 				60D50B4D1C2A1DB40010470A /* Info.plist */,
 				60D50B3C1C2A1DB40010470A /* Supporting Files */,
@@ -91,6 +90,15 @@
 				60D50B3D1C2A1DB40010470A /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60D5A7211C2F837900F4FC0D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				60D50B7F1C2A449E0010470A /* ColorLists.h */,
+				60D50B801C2A449E0010470A /* ColorLists.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

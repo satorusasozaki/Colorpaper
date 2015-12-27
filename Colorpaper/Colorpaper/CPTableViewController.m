@@ -13,7 +13,7 @@
 #import "ColorLists.h"
 
 @interface CPTableViewController ()
-@property (strong,nonatomic) ColorLists *colorList;
+@property (strong, nonatomic) ColorLists *colorList;
 
 @end
 
@@ -27,10 +27,8 @@
     [self.view addSubview:tableView];
     self.tableView = tableView;
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    
-//    ColorLists *colorList = [[ColorLists alloc] init];
+    tableView.allowsSelection = NO;
     self.colorList = [[ColorLists alloc] init];
-    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -48,7 +46,6 @@
     if (cell == nil) {
         cell = [[CPTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    // cell.backgroundColor = [UIColor colorWithHexString:[self.colorList.list objectAtIndex:indexPath.row]];
     cell.backgroundColor = [self.colorList.list objectAtIndex:indexPath.row];
     return cell;
 }
@@ -61,27 +58,28 @@
     return 90;
 }
 
+#pragma mark - Slider
+
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     
 }
+
 - (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return @[
-             [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal
-                                                title:@"\t\t"
-                                              handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-                                                  UITableViewCell *tappedCell = [tableView cellForRowAtIndexPath:indexPath];
-                                                  
-                                                  SEL selector = @selector(onCompleteCapture:didFinishSavingWithError:contextInfo:);
-                                                  
-                                                  UIImage *solidImage = [UIImage imageWithColor:tappedCell.backgroundColor];
-                                                  UIImageWriteToSavedPhotosAlbum(solidImage, self, selector, nil);
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  [tableView setEditing:NO animated:YES];
-                                              }],
-             ];
+    
+    UITableViewRowAction *save = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive
+                                                                    title:@" Save "
+                                                                    handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+                                                                        UITableViewCell *tappedCell = [tableView cellForRowAtIndexPath:indexPath];
+                                                                        
+                                                                        SEL selector = @selector(onCompleteCapture:didFinishSavingWithError:contextInfo:);
+                                                                        
+                                                                        UIImage *solidImage = [UIImage imageWithColor:tappedCell.backgroundColor];
+                                                                        UIImageWriteToSavedPhotosAlbum(solidImage, self, selector, nil);
+                                                                        
+                                                                        [tableView setEditing:NO animated:YES];
+                                                                    }];
+    save.backgroundColor = [UIColor colorWithHexString:@"007AFF"];
+    return @[save];
 }
 
 #pragma mark - Infinite Scroll
