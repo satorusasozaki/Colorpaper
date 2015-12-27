@@ -66,24 +66,15 @@
 }
 - (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
     return @[
-//             [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive
-//                                                title:@"Delete"
-//                                              handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-//                                                  // own delete action
-//                                                  [self.colorList.list removeObjectAtIndex:indexPath.row];
-//                                                  [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-//                                              }],
              [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal
                                                 title:@"\t\t"
                                               handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
                                                   UITableViewCell *tappedCell = [tableView cellForRowAtIndexPath:indexPath];
                                                   
                                                   SEL selector = @selector(onCompleteCapture:didFinishSavingWithError:contextInfo:);
-                                                  //画像を保存する
                                                   
                                                   UIImage *solidImage = [UIImage imageWithColor:tappedCell.backgroundColor];
                                                   UIImageWriteToSavedPhotosAlbum(solidImage, self, selector, nil);
-                                                  NSLog(@"Saved");
                                                   
                                                   
                                                   
@@ -106,17 +97,25 @@
 }
 
 
-- (void)onCompleteCapture:(UIImage *)screenImage
- didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
-{
+- (void)onCompleteCapture:(UIImage *)screenImage didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
     NSString *message = @"Saved to camera roll";
     if (error) message = @"Failed to save";
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @""
-                                                    message: message
-                                                   delegate: nil
-                                          cancelButtonTitle: @"OK"
-                                          otherButtonTitles: nil];
-    [alert show];
+
+    UIAlertController *alert = [UIAlertController
+                                alertControllerWithTitle:@""
+                                message:message
+                                preferredStyle:UIAlertControllerStyleAlert];
+    [self presentViewController:alert animated:YES completion:nil];
+    
+    
+    UIAlertAction *ok = [UIAlertAction
+                         actionWithTitle:@"OK"
+                         style:UIAlertActionStyleDefault
+                         handler:^(UIAlertAction *action) {
+                             [alert dismissViewControllerAnimated:YES completion:nil];
+                         }];
+    [alert addAction:ok];
+    
 }
 
 
