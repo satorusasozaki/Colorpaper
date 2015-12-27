@@ -10,6 +10,6 @@
 
 @interface ColorLists : NSObject
 
-@property (strong,nonatomic) NSArray *list;
+@property (strong,nonatomic) NSMutableArray *list;
 
 @end

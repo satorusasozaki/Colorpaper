@@ -14,6 +14,7 @@
 		60D50B7E1C2A42570010470A /* CPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D50B7D1C2A42570010470A /* CPTableViewCell.m */; };
 		60D50B811C2A449E0010470A /* ColorLists.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D50B801C2A449E0010470A /* ColorLists.m */; };
 		60D50B871C2B7B840010470A /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D50B861C2B7B840010470A /* UIColor+Hex.m */; };
+		60D5A7201C2F431600F4FC0D /* UIImage+withColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D5A71F1C2F431600F4FC0D /* UIImage+withColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		60D50B801C2A449E0010470A /* ColorLists.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorLists.m; sourceTree = "<group>"; };
 		60D50B851C2B7B840010470A /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Hex.h"; path = "../UIColor+Hex.h"; sourceTree = "<group>"; };
 		60D50B861C2B7B840010470A /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Hex.m"; path = "../UIColor+Hex.m"; sourceTree = "<group>"; };
+		60D5A71E1C2F431600F4FC0D /* UIImage+withColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+withColor.h"; sourceTree = "<group>"; };
+		60D5A71F1C2F431600F4FC0D /* UIImage+withColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+withColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,8 @@
 			children = (
 				60D50B851C2B7B840010470A /* UIColor+Hex.h */,
 				60D50B861C2B7B840010470A /* UIColor+Hex.m */,
+				60D5A71E1C2F431600F4FC0D /* UIImage+withColor.h */,
+				60D5A71F1C2F431600F4FC0D /* UIImage+withColor.m */,
 				60D50B531C2A1F230010470A /* CPAppDelegate.h */,
 				60D50B541C2A1F230010470A /* CPAppDelegate.m */,
 				60D50B791C2A272E0010470A /* CPTableViewController.h */,
@@ -162,6 +167,7 @@
 				60D50B3E1C2A1DB40010470A /* main.m in Sources */,
 				60D50B7E1C2A42570010470A /* CPTableViewCell.m in Sources */,
 				60D50B551C2A1F230010470A /* CPAppDelegate.m in Sources */,
+				60D5A7201C2F431600F4FC0D /* UIImage+withColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

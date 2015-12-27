@@ -9,6 +9,7 @@
 #import "CPTableViewController.h"
 #import "CPTableViewCell.h"
 #import "UIColor+Hex.h"
+#import "UIImage+withColor.h"
 #import "ColorLists.h"
 
 @interface CPTableViewController ()
@@ -60,27 +61,65 @@
     return 90;
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+- (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return @[
+//             [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive
+//                                                title:@"Delete"
+//                                              handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+//                                                  // own delete action
+//                                                  [self.colorList.list removeObjectAtIndex:indexPath.row];
+//                                                  [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+//                                              }],
+             [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal
+                                                title:@"\t\t"
+                                              handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+                                                  UITableViewCell *tappedCell = [tableView cellForRowAtIndexPath:indexPath];
+                                                  
+                                                  SEL selector = @selector(onCompleteCapture:didFinishSavingWithError:contextInfo:);
+                                                  //画像を保存する
+                                                  
+                                                  UIImage *solidImage = [UIImage imageWithColor:tappedCell.backgroundColor];
+                                                  UIImageWriteToSavedPhotosAlbum(solidImage, self, selector, nil);
+                                                  NSLog(@"Saved");
+                                                  
+                                                  
+                                                  
+                                                  
+                                                  [tableView setEditing:NO animated:YES];
+                                              }],
+             ];
+}
 
-
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-//{
-//    CGFloat actualPosition = scrollView.contentOffset.y;
-//    // contentSize.height(実際のサイズ)より少し減らしておくことで、そこに到達した時点で（実際のcontentSize.heightに到達する前に）限界を上げてくれる
-//    CGFloat contentHeight = scrollView.contentSize.height;
-//    if (actualPosition >= contentHeight) {
-//        [self.tableView reloadData];
-//    }
-//}
+#pragma mark - Infinite Scroll
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    NSArray *test = [NSArray array];
     CGFloat actualPosition = scrollView.contentOffset.y;
-    CGFloat contentHeight = scrollView.contentSize.height - 500;
+    CGFloat contentHeight = scrollView.contentSize.height - 1000;
     if (actualPosition >= contentHeight) {
-        [test addObjectsFromArray:self.colorList.list];
+        [self.colorList.list addObjectsFromArray:self.colorList.list];
         [self.tableView reloadData];
     }
 }
+
+
+- (void)onCompleteCapture:(UIImage *)screenImage
+ didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    NSString *message = @"Saved to camera roll";
+    if (error) message = @"Failed to save";
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @""
+                                                    message: message
+                                                   delegate: nil
+                                          cancelButtonTitle: @"OK"
+                                          otherButtonTitles: nil];
+    [alert show];
+}
+
+
+
 
 @end

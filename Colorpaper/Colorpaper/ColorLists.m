@@ -17,8 +17,8 @@
     return self;
 }
 
-- (NSArray *)createArray{
-    NSArray *list = [NSArray arrayWithObjects:@"8FBC8F",
+- (NSMutableArray *)createArray{
+    NSMutableArray *list = [NSMutableArray arrayWithObjects:@"8FBC8F",
                                               @"C1FFC1",
                                               @"B4EEB4",
                                               @"9BCD9B",
