@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		602897DB1C3335AC00CBC6D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 602897DA1C3335AC00CBC6D7 /* LaunchScreen.storyboard */; };
 		60D50B3E1C2A1DB40010470A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D50B3D1C2A1DB40010470A /* main.m */; };
 		60D50B491C2A1DB40010470A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60D50B481C2A1DB40010470A /* Assets.xcassets */; };
 		60D50B551C2A1F230010470A /* CPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D50B541C2A1F230010470A /* CPAppDelegate.m */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		602897DA1C3335AC00CBC6D7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60D50B391C2A1DB40010470A /* Colorpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colorpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D50B3D1C2A1DB40010470A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		60D50B481C2A1DB40010470A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				60D50B7C1C2A42570010470A /* CPTableViewCell.h */,
 				60D50B7D1C2A42570010470A /* CPTableViewCell.m */,
 				60D5A7211C2F837900F4FC0D /* Models */,
+				602897DA1C3335AC00CBC6D7 /* LaunchScreen.storyboard */,
 				60D50B481C2A1DB40010470A /* Assets.xcassets */,
 				60D50B4D1C2A1DB40010470A /* Info.plist */,
 				60D50B3C1C2A1DB40010470A /* Supporting Files */,
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60D50B491C2A1DB40010470A /* Assets.xcassets in Resources */,
+				602897DB1C3335AC00CBC6D7 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,8 +274,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Colorpaper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = satorusasozaki.Colorpaper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.satorusasozaki.colorpaper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b9e51ee9-c5f3-41ef-b516-1363082aa18e";
 			};
 			name = Debug;
 		};
@@ -279,10 +284,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Satoru Sasozaki (PY8CHQP699)";
 				INFOPLIST_FILE = Colorpaper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = satorusasozaki.Colorpaper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.satorusasozaki.colorpaper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b9e51ee9-c5f3-41ef-b516-1363082aa18e";
 			};
 			name = Release;
 		};
