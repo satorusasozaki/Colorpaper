@@ -52,7 +52,7 @@
 		60D50B301C2A1DB40010470A = {
 			isa = PBXGroup;
 			children = (
-				60D50B3B1C2A1DB40010470A /* Colorpaper */,
+				60D50B3B1C2A1DB40010470A /* Solidpaper */,
 				60D50B3A1C2A1DB40010470A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,7 +65,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		60D50B3B1C2A1DB40010470A /* Colorpaper */ = {
+		60D50B3B1C2A1DB40010470A /* Solidpaper */ = {
 			isa = PBXGroup;
 			children = (
 				60D50B851C2B7B840010470A /* UIColor+Hex.h */,
@@ -84,6 +84,7 @@
 				60D50B4D1C2A1DB40010470A /* Info.plist */,
 				60D50B3C1C2A1DB40010470A /* Supporting Files */,
 			);
+			name = Solidpaper;
 			path = Colorpaper;
 			sourceTree = "<group>";
 		};
