@@ -20,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		602897DA1C3335AC00CBC6D7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		60D50B391C2A1DB40010470A /* Colorpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colorpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60D50B391C2A1DB40010470A /* Solidpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Solidpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D50B3D1C2A1DB40010470A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		60D50B481C2A1DB40010470A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60D50B4D1C2A1DB40010470A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		60D50B3A1C2A1DB40010470A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				60D50B391C2A1DB40010470A /* Colorpaper.app */,
+				60D50B391C2A1DB40010470A /* Solidpaper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,9 +107,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		60D50B381C2A1DB40010470A /* Colorpaper */ = {
+		60D50B381C2A1DB40010470A /* Solidpaper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 60D50B501C2A1DB40010470A /* Build configuration list for PBXNativeTarget "Colorpaper" */;
+			buildConfigurationList = 60D50B501C2A1DB40010470A /* Build configuration list for PBXNativeTarget "Solidpaper" */;
 			buildPhases = (
 				60D50B351C2A1DB40010470A /* Sources */,
 				60D50B361C2A1DB40010470A /* Frameworks */,
@@ -119,9 +119,9 @@
 			);
 			dependencies = (
 			);
-			name = Colorpaper;
+			name = Solidpaper;
 			productName = Colorpaper;
-			productReference = 60D50B391C2A1DB40010470A /* Colorpaper.app */;
+			productReference = 60D50B391C2A1DB40010470A /* Solidpaper.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -138,7 +138,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 60D50B341C2A1DB40010470A /* Build configuration list for PBXProject "Colorpaper" */;
+			buildConfigurationList = 60D50B341C2A1DB40010470A /* Build configuration list for PBXProject "Solidpaper" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -151,7 +151,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				60D50B381C2A1DB40010470A /* Colorpaper */,
+				60D50B381C2A1DB40010470A /* Solidpaper */,
 			);
 		};
 /* End PBXProject section */
@@ -275,7 +275,7 @@
 				INFOPLIST_FILE = Colorpaper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.satorusasozaki.colorpaper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Solidpaper;
 				PROVISIONING_PROFILE = "b9e51ee9-c5f3-41ef-b516-1363082aa18e";
 			};
 			name = Debug;
@@ -288,7 +288,7 @@
 				INFOPLIST_FILE = Colorpaper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.satorusasozaki.colorpaper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Solidpaper;
 				PROVISIONING_PROFILE = "b9e51ee9-c5f3-41ef-b516-1363082aa18e";
 			};
 			name = Release;
@@ -296,7 +296,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		60D50B341C2A1DB40010470A /* Build configuration list for PBXProject "Colorpaper" */ = {
+		60D50B341C2A1DB40010470A /* Build configuration list for PBXProject "Solidpaper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				60D50B4E1C2A1DB40010470A /* Debug */,
@@ -305,7 +305,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		60D50B501C2A1DB40010470A /* Build configuration list for PBXNativeTarget "Colorpaper" */ = {
+		60D50B501C2A1DB40010470A /* Build configuration list for PBXNativeTarget "Solidpaper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				60D50B511C2A1DB40010470A /* Debug */,
