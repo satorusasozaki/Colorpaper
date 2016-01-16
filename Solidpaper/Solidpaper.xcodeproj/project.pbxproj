@@ -356,7 +356,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.satorusasozaki.colorpaper;
 				PRODUCT_NAME = Solidpaper;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "1c630644-85fc-4d92-8c79-34628d5beda9";
 			};
 			name = Debug;
 		};
@@ -371,7 +371,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.satorusasozaki.colorpaper;
 				PRODUCT_NAME = Solidpaper;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "1c630644-85fc-4d92-8c79-34628d5beda9";
 			};
 			name = Release;
 		};
