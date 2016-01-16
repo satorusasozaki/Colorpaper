@@ -11,7 +11,7 @@
 #import "UIColor+Hex.h"
 #import "UIImage+withColor.h"
 #import "ColorLists.h"
-
+#import "NZAlertView.h"
 @interface CPTableViewController ()
 @property (strong, nonatomic) ColorLists *colorList;
 
@@ -95,23 +95,43 @@
 }
 
 - (void)onCompleteCapture:(UIImage *)screenImage didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
-    NSString *message = @"Saved to camera roll";
-    if (error) message = @"Failed to save";
+//    NSString *message = @"Saved to camera roll";
+//    if (error) message = @"Failed to save";
+//
+//    UIAlertController *alert = [UIAlertController
+//                                alertControllerWithTitle:@""
+//                                message:message
+//                                preferredStyle:UIAlertControllerStyleAlert];
+//    [self presentViewController:alert animated:YES completion:nil];
+//    
+//    
+//    UIAlertAction *ok = [UIAlertAction
+//                         actionWithTitle:@"OK"
+//                         style:UIAlertActionStyleDefault
+//                         handler:^(UIAlertAction *action) {
+//                             [alert dismissViewControllerAnimated:YES completion:nil];
+//                         }];
+//    [alert addAction:ok];
 
-    UIAlertController *alert = [UIAlertController
-                                alertControllerWithTitle:@""
-                                message:message
-                                preferredStyle:UIAlertControllerStyleAlert];
-    [self presentViewController:alert animated:YES completion:nil];
     
+    // There are several ways to init, just look at the class header
+    NZAlertView *alert = [[NZAlertView alloc] initWithStyle:NZAlertStyleSuccess
+                                                      title:@"Alert View"
+                                                    message:@"This is an alert example."
+                                                   delegate:nil];
+  
+    alert.alertDuration = 0.5;
+//    alert.animationDuration = 0.1;
+    [alert setTextAlignment:NSTextAlignmentCenter];
     
-    UIAlertAction *ok = [UIAlertAction
-                         actionWithTitle:@"OK"
-                         style:UIAlertActionStyleDefault
-                         handler:^(UIAlertAction *action) {
-                             [alert dismissViewControllerAnimated:YES completion:nil];
-                         }];
-    [alert addAction:ok];
+    [alert show];
+    
+
+    // or
+    
+//    [alert showWithCompletion:^{
+//        NSLog(@"Alert with completion handler");
+//    }];
     
 }
 
