@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		41D2D323C43E0D823453B3CC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BAC67BD25F047D00D507094 /* libPods.a */; };
 		602897DB1C3335AC00CBC6D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 602897DA1C3335AC00CBC6D7 /* LaunchScreen.storyboard */; };
 		60D50B3E1C2A1DB40010470A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D50B3D1C2A1DB40010470A /* main.m */; };
 		60D50B491C2A1DB40010470A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60D50B481C2A1DB40010470A /* Assets.xcassets */; };
@@ -17,10 +16,10 @@
 		60D50B811C2A449E0010470A /* ColorLists.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D50B801C2A449E0010470A /* ColorLists.m */; };
 		60D50B871C2B7B840010470A /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D50B861C2B7B840010470A /* UIColor+Hex.m */; };
 		60D5A7201C2F431600F4FC0D /* UIImage+withColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D5A71F1C2F431600F4FC0D /* UIImage+withColor.m */; };
+		BF3100ADD55D88608C495923 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7582DCFFE0E0F2FB0664383F /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4BAC67BD25F047D00D507094 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		602897DA1C3335AC00CBC6D7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60D50B391C2A1DB40010470A /* Solidpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Solidpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D50B3D1C2A1DB40010470A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		60D50B861C2B7B840010470A /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Hex.m"; path = "../UIColor+Hex.m"; sourceTree = "<group>"; };
 		60D5A71E1C2F431600F4FC0D /* UIImage+withColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+withColor.h"; sourceTree = "<group>"; };
 		60D5A71F1C2F431600F4FC0D /* UIImage+withColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+withColor.m"; sourceTree = "<group>"; };
+		7582DCFFE0E0F2FB0664383F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F9C9AB91C9D8BCD9EDD305 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E5703AB10A144E6E8492C90C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41D2D323C43E0D823453B3CC /* libPods.a in Frameworks */,
+				BF3100ADD55D88608C495923 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +115,7 @@
 		68D78459229289D07ADD4CB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4BAC67BD25F047D00D507094 /* libPods.a */,
+				7582DCFFE0E0F2FB0664383F /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

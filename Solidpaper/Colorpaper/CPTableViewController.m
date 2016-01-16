@@ -11,7 +11,9 @@
 #import "UIColor+Hex.h"
 #import "UIImage+withColor.h"
 #import "ColorLists.h"
-#import "NZAlertView.h"
+#import <URBNAlert/URBNAlert.h>
+
+
 @interface CPTableViewController ()
 @property (strong, nonatomic) ColorLists *colorList;
 
@@ -114,25 +116,20 @@
 //    [alert addAction:ok];
 
     
-    // There are several ways to init, just look at the class header
-    NZAlertView *alert = [[NZAlertView alloc] initWithStyle:NZAlertStyleSuccess
-                                                      title:@"Alert View"
-                                                    message:@"This is an alert example."
-                                                   delegate:nil];
-  
-    alert.alertDuration = 0.5;
-//    alert.animationDuration = 0.1;
-    [alert setTextAlignment:NSTextAlignmentCenter];
-    
-    [alert show];
-    
+    URBNAlertViewController *uac = [[URBNAlertViewController alloc] initWithTitle:@"The color is saved to your camera roll" message:@""];
+    uac.alertConfig.touchOutsideViewToDismiss = YES; // Touching outside the alert view will dismiss the alert (only for passive alerts)
+    uac.alertConfig.duration = 2.0f; // Duration the alert appears (default calculates time based on the amount of text in the title and message. For passive alerts only)
+    uac.alertStyler.blurEnabled = @NO;
+    uac.alertStyler.buttonBackgroundColor = [UIColor colorWithHexString:@"007AFF"];
+    [uac addAction:[URBNAlertAction actionWithTitle:@"OK" actionType:URBNAlertActionTypeNormal actionCompleted:^(URBNAlertAction *action) {
+        // URBNAlertActionTypeNormal is triggered when the user touches the button specified by this action
+    }]];
 
-    // or
+    [uac addAction:[URBNAlertAction actionWithTitle:nil actionType:URBNAlertActionTypePassive actionCompleted:^(URBNAlertAction *action) {
+        // URBNAlertActionTypePassive is triggered when the user taps on the actual alert view only for passive. Do something here, ie push a new view controller. For passive alerts only.
+    }]];
     
-//    [alert showWithCompletion:^{
-//        NSLog(@"Alert with completion handler");
-//    }];
-    
+    [uac show];
 }
 
 

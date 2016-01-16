@@ -1,1 +1,2 @@
-pod 'NZAlertView'
+use_frameworks!
+pod "URBNAlert"

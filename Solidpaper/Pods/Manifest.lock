@@ -1,13 +1,13 @@
 PODS:
-  - NZAlertView (0.0.13):
-    - UIImage-Helpers
-  - UIImage-Helpers (0.0.3)
+  - URBNAlert (1.9.2):
+    - URBNConvenience (> 0.8.2)
+  - URBNConvenience (1.0.0)
 
 DEPENDENCIES:
-  - NZAlertView
+  - URBNAlert
 
 SPEC CHECKSUMS:
-  NZAlertView: 3f08e809456b35f5cc64de2dcdc9f5fc3f8eb77f
-  UIImage-Helpers: 06b04a42bdd222844035602e87e936765c80f620
+  URBNAlert: fdae28490518be3bdd841691daa74cb062aef682
+  URBNConvenience: 46437a01fa6b138791b1856d8d3f78154c2f1912
 
 COCOAPODS: 0.39.0
