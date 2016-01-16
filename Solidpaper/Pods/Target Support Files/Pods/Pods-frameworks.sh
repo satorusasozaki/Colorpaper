@@ -84,10 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods/MCSwipeTableViewCell.framework"
   install_framework "Pods/URBNAlert.framework"
   install_framework "Pods/URBNConvenience.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods/MCSwipeTableViewCell.framework"
   install_framework "Pods/URBNAlert.framework"
   install_framework "Pods/URBNConvenience.framework"
 fi
