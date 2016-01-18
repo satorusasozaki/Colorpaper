@@ -11,8 +11,8 @@
 #import "UIColor+Hex.h"
 #import "UIImage+withColor.h"
 #import "ColorLists.h"
-#import "URBNAlert.h"
-#import "MCSwipeTableViewCell.h"
+//#import "URBNAlert.h"
+//#import "MCSwipeTableViewCell.h"
 
 @interface CPTableViewController ()
 @property (strong, nonatomic) ColorLists *colorList;
@@ -43,23 +43,23 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *identifier = @"CELL";
-    MCSwipeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (cell == nil) {
-        cell = [[MCSwipeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-    }
-    cell.backgroundColor = [self.colorList.list objectAtIndex:indexPath.row];
-    
-    
-    UIView *checkView = [self viewWithImageName:@"check"];
-    UIColor *greenColor = [UIColor colorWithRed:85.0 / 255.0 green:213.0 / 255.0 blue:80.0 / 255.0 alpha:1.0];
-    
-    
-    [cell setDefaultColor:self.tableView.backgroundView.backgroundColor];
-    [cell setSwipeGestureWithView:checkView color:greenColor mode:MCSwipeTableViewCellModeExit state:MCSwipeTableViewCellState1 completionBlock:^(MCSwipeTableViewCell *cell, MCSwipeTableViewCellState state, MCSwipeTableViewCellMode mode) {
-        [self deleteCell:cell];
-        NSLog(@"Did swipe \"Checkmark\" cell");
-    }];
+//    static NSString *identifier = @"CELL";
+//    MCSwipeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+//    if (cell == nil) {
+//        cell = [[MCSwipeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+//    }
+//    cell.backgroundColor = [self.colorList.list objectAtIndex:indexPath.row];
+//    
+//    
+//    UIView *checkView = [self viewWithImageName:@"check"];
+//    UIColor *greenColor = [UIColor colorWithRed:85.0 / 255.0 green:213.0 / 255.0 blue:80.0 / 255.0 alpha:1.0];
+//    
+//    
+//    [cell setDefaultColor:self.tableView.backgroundView.backgroundColor];
+//    [cell setSwipeGestureWithView:checkView color:greenColor mode:MCSwipeTableViewCellModeExit state:MCSwipeTableViewCellState1 completionBlock:^(MCSwipeTableViewCell *cell, MCSwipeTableViewCellState state, MCSwipeTableViewCellMode mode) {
+//        [self deleteCell:cell];
+//        NSLog(@"Did swipe \"Checkmark\" cell");
+//    }];
 
     
 //    UIView *crossView = [self viewWithImageName:@"cross"];
@@ -69,14 +69,14 @@
 //    }];
 
     
-    
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
     return cell;
 }
 
-- (void)deleteCell:(MCSwipeTableViewCell *)cell {
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-}
+//- (void)deleteCell:(MCSwipeTableViewCell *)cell {
+//    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+//    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//}
 
 - (UIView *)viewWithImageName:(NSString *)imageName {
     UIImage *image = [UIImage imageNamed:imageName];
@@ -131,16 +131,16 @@
 
 - (void)onCompleteCapture:(UIImage *)screenImage didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
     
-    URBNAlertViewController *uac = [[URBNAlertViewController alloc] initWithTitle:@"The color is saved to your camera roll" message:@""];
-    uac.alertConfig.touchOutsideViewToDismiss = YES; // Touching outside the alert view will dismiss the alert (only for passive alerts)
-    uac.alertConfig.duration = 2.0f; // Duration the alert appears (default calculates time based on the amount of text in the title and message. For passive alerts only)
-    uac.alertStyler.blurEnabled = @NO;
-    uac.alertStyler.buttonBackgroundColor = [UIColor colorWithHexString:@"007AFF"];
-    [uac addAction:[URBNAlertAction actionWithTitle:@"OK" actionType:URBNAlertActionTypeNormal actionCompleted:^(URBNAlertAction *action) {
-        // URBNAlertActionTypeNormal is triggered when the user touches the button specified by this action
-    }]];
-    
-    [uac show];
+//    URBNAlertViewController *uac = [[URBNAlertViewController alloc] initWithTitle:@"The color is saved to your camera roll" message:@""];
+//    uac.alertConfig.touchOutsideViewToDismiss = YES; // Touching outside the alert view will dismiss the alert (only for passive alerts)
+//    uac.alertConfig.duration = 2.0f; // Duration the alert appears (default calculates time based on the amount of text in the title and message. For passive alerts only)
+//    uac.alertStyler.blurEnabled = @NO;
+//    uac.alertStyler.buttonBackgroundColor = [UIColor colorWithHexString:@"007AFF"];
+//    [uac addAction:[URBNAlertAction actionWithTitle:@"OK" actionType:URBNAlertActionTypeNormal actionCompleted:^(URBNAlertAction *action) {
+//        // URBNAlertActionTypeNormal is triggered when the user touches the button specified by this action
+//    }]];
+//    
+//    [uac show];
 }
 
 
