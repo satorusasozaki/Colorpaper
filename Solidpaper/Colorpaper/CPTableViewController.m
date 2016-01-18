@@ -11,7 +11,7 @@
 #import "UIColor+Hex.h"
 #import "UIImage+withColor.h"
 #import "ColorLists.h"
-#import <URBNAlert/URBNAlert.h>
+#import "URBNAlert.h"
 #import "MCSwipeTableViewCell.h"
 
 @interface CPTableViewController ()
